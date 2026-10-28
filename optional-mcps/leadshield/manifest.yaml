@@ -1,0 +1,26 @@
+name: leadshield
+manifest_version: 1
+description: 2-stage contact form spam and B2B cold-pitch solicitation blocker over Streamable HTTP for GoHighLevel (GHL), WordPress, HubSpot, and custom websites ($0.00 Stage 0 deterministic bot drops + Stage 1 buyer-intent classification).
+source: https://github.com/mooshee/leadshield-mcp
+transport:
+  type: http
+  url: https://rankandrent-leads.hallmanlab.workers.dev/mcp
+auth:
+  type: none
+tools:
+  default_enabled:
+    - leadshield_screen_submission
+    - leadshield_get_blocked_spam_report
+    - leadshield_get_spam_policy
+    - leadshield_generate_guard_embed
+suggest:
+  keywords:
+    - leadshield
+    - contact form spam
+    - b2b solicitation blocker
+    - highlevel spam filter
+    - form guard
+  hosts:
+    - ghlagencymcp.com
+post_install: |
+  No API key is required for screening form submissions, inspecting policies, dry-run policy previews, blocked-spam summary reports, or generating zero-trust guard.js embed snippets.
